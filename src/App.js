@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Banner from "./Components/Banner/Banner";
+import KaranSkills from "./Components/Skills/KaranSkills";
+import ResponsiveAppBar from "./Components/TopNavBar/ResponsiveAppBar";
 
 function App() {
+  const customPadding = { lg: "10rem", md: "5rem", xs: "0" };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ResponsiveAppBar customPadding={customPadding} />
+      <Banner customPadding={customPadding} />
+      <KaranSkills customPadding={customPadding} />
     </div>
   );
 }
