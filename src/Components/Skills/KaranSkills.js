@@ -13,14 +13,11 @@ const skills = [
 const KaranSkills = ({ customPadding }) => {
   return (
     <Box
-      sx={{ flexGrow: 1, px: customPadding, py: "5rem", textAlign: "center" }}
+      sx={{ flexGrow: 1, px: customPadding, pt: "3rem", textAlign: "center" }}
     >
-      <Grid
-        sx={{ display: "flex", flexDirection: "column", py: "2rem" }}
-        container
-      >
+      <Grid sx={{ display: "flex", flexDirection: "column" }} container>
         <CustomTypography color="#212121" variant="h3" text="Programming's" />
-        <CustomTypography color="#fca422" variant="h3" text="I'm Good At 🙃" />
+        <CustomTypography color="#fca422" variant="h3" text="I'm Good At 👍" />
       </Grid>
       <Grid sx={{ py: "2rem" }} container>
         {skills.map((skillArray, index) => {

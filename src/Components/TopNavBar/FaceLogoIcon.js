@@ -18,7 +18,10 @@ const FaceLogoIcon = ({
       <Box sx={{ flexGrow: 0 }}>
         <Tooltip title="Open settings">
           <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-            <Avatar alt="Remy Sharp" src="./assets/images/E-Photo.jpg" />
+            <Avatar
+              alt="Karan Singh"
+              src="./portfolio/assets/images/E-Photo.jpg"
+            />
           </IconButton>
         </Tooltip>
         <Menu

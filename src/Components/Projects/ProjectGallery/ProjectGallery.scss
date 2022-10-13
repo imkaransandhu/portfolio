@@ -1,0 +1,18 @@
+.project-gallery-box {
+  overflow: hidden;
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+  }
+
+  img {
+    transition: transform 1s;
+  }
+
+  &:hover > img,
+  &:focus > img,
+  &:active > img {
+    transform: scale(1.2);
+  }
+}

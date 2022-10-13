@@ -11,9 +11,10 @@ const ObjectiveKaran = () => {
       variant="subtitle2"
       gutterBottom
     >
-      subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-      blanditiis tenetur dolor sit amet, consectetur adipisicing elit. Quos
-      blanditiis tenetur
+      I am young and passionate junior web developer who specialize in Front-end
+      development. Moreover, I have started to learn some back-end including
+      node.js, Express.js, API's. Additionally, I am interested in board games
+      and puzzles. In achievements, best time to solve Rubik cube is 94 seconds.
     </Typography>
   );
 };

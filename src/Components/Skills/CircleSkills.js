@@ -1,5 +1,19 @@
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
+import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
+
+const BootstrapTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.palette.common.black,
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
 
 const CircleSkills = ({ skills, index }) => {
   return (
@@ -7,9 +21,14 @@ const CircleSkills = ({ skills, index }) => {
       <div className="circle">
         {skills[index].map((skill, index) => {
           return (
-            <span key={index} className={`skill-${++index}`}>
-              <img src={`./assets/images/skills/${skill}.svg`} alt={skill} />
-            </span>
+            <BootstrapTooltip key={index} title={skill}>
+              <Button className={`skills skill-${++index}`}>
+                <img
+                  src={`./portfolio/assets/images/skills/${skill}.svg`}
+                  alt={skill}
+                />
+              </Button>
+            </BootstrapTooltip>
           );
         })}
       </div>

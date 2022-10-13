@@ -1,5 +1,7 @@
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
+import Footer from "./Components/Footer/Footer";
+import KaranProjects from "./Components/Projects/KaranProjects";
 import KaranSkills from "./Components/Skills/KaranSkills";
 import ResponsiveAppBar from "./Components/TopNavBar/ResponsiveAppBar";
 
@@ -11,6 +13,8 @@ function App() {
       <ResponsiveAppBar customPadding={customPadding} />
       <Banner customPadding={customPadding} />
       <KaranSkills customPadding={customPadding} />
+      <KaranProjects customPadding={customPadding} />
+      <Footer customPadding={customPadding} />
     </div>
   );
 }

@@ -10,7 +10,7 @@ const ImageBanner = () => {
     >
       <img
         style={{ transform: "scale(1.2)", height: "20rem", width: "80%" }}
-        src="./assets/images/KaranFace.svg"
+        src="./portfolio/assets/images/KaranFace.svg"
         alt="Karan Face SVG"
       />
     </Grid>
