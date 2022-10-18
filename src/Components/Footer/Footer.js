@@ -1,11 +1,13 @@
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import React from "react";
+import { useContext } from "react";
 import CustomTypography from "../SharedComponents/CustomTypography";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import CustomPaddingContext from "./../../Contexts/CustomPaddingContext";
 
-const Footer = ({ customPadding }) => {
+const Footer = () => {
+  const customPadding = useContext(CustomPaddingContext);
   return (
     <Box
       sx={{ flexGrow: 1, px: customPadding, py: "1rem", textAlign: "center" }}

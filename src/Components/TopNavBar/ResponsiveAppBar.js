@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState, useContext } from "react";
 import AppBar from "@mui/material/AppBar";
 
 import Toolbar from "@mui/material/Toolbar";
@@ -10,13 +10,15 @@ import MobileLogo from "./MobileLogo";
 import FaceLogoIcon from "./FaceLogoIcon";
 import MobileMenu from "./MobileMenu";
 import DesktopMenu from "./DesktopMenu";
+import CustomPaddingContext from "./../../Contexts/CustomPaddingContext";
 
 const pages = ["Skills", "Projects", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const ResponsiveAppBar = ({ customPadding }) => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+const ResponsiveAppBar = ({ changeSection }) => {
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
+  const customPadding = useContext(CustomPaddingContext);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -40,15 +42,15 @@ const ResponsiveAppBar = ({ customPadding }) => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <DesktopLogo />
+          <DesktopLogo changeSection={changeSection} />
           <MobileMenu
             handleOpenNavMenu={handleOpenNavMenu}
             anchorElNav={anchorElNav}
             handleCloseNavMenu={handleCloseNavMenu}
             pages={pages}
           />
-          <MobileLogo />
-          <DesktopMenu pages={pages} handleCloseNavMenu={handleCloseNavMenu} />
+          <MobileLogo changeSection={changeSection} />
+          <DesktopMenu changeSection={changeSection} pages={pages} />
           <FaceLogoIcon
             handleOpenUserMenu={handleOpenUserMenu}
             anchorElUser={anchorElUser}

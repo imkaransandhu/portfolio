@@ -8,32 +8,32 @@ import "./ProjectGallery.scss";
 
 const itemData = [
   {
-    img: "./portfolio/assets/images/projects/restApi.png",
+    img: "restApi",
     title: "Rest Countries API",
     author: "@bkristastucchio",
   },
   {
-    img: "./portfolio/assets/images/projects/reactTodo.png",
+    img: "reactTodo",
     title: "React ToDo",
     author: "@rollelflex_graphy726",
   },
   {
-    img: "./portfolio/assets/images/projects/jsTodo.png",
+    img: "jsTodo",
     title: "JavsScript ToDo",
     author: "@helloimnik",
   },
   {
-    img: "./portfolio/assets/images/projects/huddleSvg.png",
+    img: "huddleSvg",
     title: "Huddle SVG's",
     author: "@nolanissac",
   },
   {
-    img: "./portfolio/assets/images/projects/chatApp.png",
+    img: "chatApp",
     title: "Chat App",
     author: "@hjrc33",
   },
   {
-    img: "./portfolio/assets/images/projects/rockPaperScissor.png",
+    img: "rockPaperScissor",
     title: "Stone Paper Scissor",
     author: "@arwinneil",
   },
@@ -63,7 +63,11 @@ const ProjectGallery = () => {
             cols={cols}
             rows={rows}
           >
-            <img src={item.img} alt={item.title} loading="lazy" />
+            <img
+              src={`./assets/images/projects/${item.img}.png`}
+              alt={item.title}
+              loading="lazy"
+            />
             <ImageListItemBar
               sx={{
                 background:

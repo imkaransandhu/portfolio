@@ -23,10 +23,7 @@ const CircleSkills = ({ skills, index }) => {
           return (
             <BootstrapTooltip key={index} title={skill}>
               <Button className={`skills skill-${++index}`}>
-                <img
-                  src={`./portfolio/assets/images/skills/${skill}.svg`}
-                  alt={skill}
-                />
+                <img src={`./assets/images/skills/${skill}.svg`} alt={skill} />
               </Button>
             </BootstrapTooltip>
           );

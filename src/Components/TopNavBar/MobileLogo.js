@@ -2,7 +2,7 @@ import PersonPinIcon from "@mui/icons-material/PersonPin";
 import { Typography } from "@mui/material";
 import React, { Fragment } from "react";
 
-const MobileLogo = () => {
+const MobileLogo = ({ changeSection }) => {
   return (
     <Fragment>
       <PersonPinIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
@@ -10,7 +10,7 @@ const MobileLogo = () => {
         variant="h5"
         noWrap
         component="a"
-        href=""
+        onClick={changeSection}
         sx={{
           mr: 2,
           display: { xs: "flex", md: "none" },

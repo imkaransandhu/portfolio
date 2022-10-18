@@ -1,13 +1,22 @@
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import React from "react";
+import { useContext } from "react";
 import CustomTypography from "../SharedComponents/CustomTypography";
 import ProjectGallery from "./ProjectGallery/ProjectGallery";
-
-const KaranProjects = ({ customPadding }) => {
+import CustomPaddingContext from "./../../Contexts/CustomPaddingContext";
+import SectionContext from "../../Contexts/SectionContext";
+const KaranProjects = () => {
+  const customPadding = useContext(CustomPaddingContext);
+  const [section] = useContext(SectionContext);
   return (
     <Box
-      sx={{ flexGrow: 1, px: customPadding, pt: "3rem", textAlign: "center" }}
+      sx={{
+        flexGrow: 1,
+        px: customPadding,
+        pt: "3rem",
+        textAlign: "center",
+        display: section === "Projects" ? "block" : "none",
+      }}
     >
       <Grid sx={{ display: "flex", flexDirection: "column" }} container>
         <CustomTypography color="#212121" variant="h3" text="Project's" />
