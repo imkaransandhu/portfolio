@@ -15,6 +15,7 @@ const Banner = () => {
       sx={{
         flexGrow: 1,
         px: customPadding,
+        pb: "5rem",
         display: section === "banner" ? "flex" : "none",
       }}
     >

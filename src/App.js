@@ -15,7 +15,7 @@ function App() {
     xs: "0",
   };
 
-  const [section, setSection] = useState(["Skills"]);
+  const [section, setSection] = useState(["banner"]);
   console.log(section);
   const changeSection = (e) => {
     console.log(e.currentTarget.value);

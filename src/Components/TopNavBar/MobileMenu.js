@@ -5,15 +5,17 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Button } from "@mui/material";
 
 const MobileMenu = ({
   handleOpenNavMenu,
   anchorElNav,
   pages,
   handleCloseNavMenu,
+  changeSection,
 }) => {
   return (
-    <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+    <Box sx={{ display: { xs: "flex", md: "none" } }}>
       <IconButton
         size="large"
         aria-label="account of current user"
@@ -44,7 +46,11 @@ const MobileMenu = ({
       >
         {pages.map((page) => (
           <MenuItem key={page} onClick={handleCloseNavMenu}>
-            <Typography textAlign="center">{page}</Typography>
+            <Button onClick={changeSection} value={page}>
+              <Typography sx={{ color: "#000" }} textAlign="center">
+                {page}
+              </Typography>
+            </Button>
           </MenuItem>
         ))}
       </Menu>

@@ -1,30 +1,39 @@
 import PersonPinIcon from "@mui/icons-material/PersonPin";
-import { Typography } from "@mui/material";
-import React, { Fragment } from "react";
+import { Button, Typography } from "@mui/material";
 
 const MobileLogo = ({ changeSection }) => {
   return (
-    <Fragment>
-      <PersonPinIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+    <Button
+      value="banner"
+      onClick={changeSection}
+      sx={{
+        mr: 2,
+        display: { xs: "flex", md: "none" },
+        flexGrow: 1,
+        fontFamily: "monospace",
+        fontWeight: 700,
+        letterSpacing: ".3rem",
+        color: "inherit",
+        fontSize: "1.3rem",
+        textDecoration: "none",
+        p: 0,
+      }}
+    >
+      <PersonPinIcon sx={{ mr: 1 }} />
       <Typography
-        variant="h5"
-        noWrap
-        component="a"
-        onClick={changeSection}
         sx={{
-          mr: 2,
-          display: { xs: "flex", md: "none" },
-          flexGrow: 1,
           fontFamily: "monospace",
           fontWeight: 700,
           letterSpacing: ".3rem",
           color: "inherit",
+          fontSize: "1.3rem",
           textDecoration: "none",
+          p: 0,
         }}
       >
         PORTFOLIO
       </Typography>
-    </Fragment>
+    </Button>
   );
 };
 

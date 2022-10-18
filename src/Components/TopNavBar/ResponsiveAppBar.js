@@ -47,6 +47,7 @@ const ResponsiveAppBar = ({ changeSection }) => {
             handleOpenNavMenu={handleOpenNavMenu}
             anchorElNav={anchorElNav}
             handleCloseNavMenu={handleCloseNavMenu}
+            changeSection={changeSection}
             pages={pages}
           />
           <MobileLogo changeSection={changeSection} />
